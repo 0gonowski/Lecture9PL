@@ -1,0 +1,61 @@
+﻿############################################
+# 1 ▪ Artefakty kompilacji .NET / MSBuild  #
+############################################
+bin/
+obj/
+out/
+TestResults/
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.cache
+*.nuget.props
+*.nuget.g.props
+*.nuget.g.targets
+*.dbmdl          # plik bazy LocalDB tworzony przez VS
+*.generated.cs
+*.NETCoreApp,Version=*/
+*.StaticWebAssets.xml
+*.staticwebassets.runtime.json
+# — folder „packages” tylko gdy trzymasz paczki NuGet lokalnie
+packages/
+
+############################################
+# 2 ▪ Pliki i ustawienia IDE               #
+############################################
+# JetBrains Rider / IntelliJ
+.idea/
+*.sln.iml
+*.DotSettings
+*.DotSettings.user
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+# VS Code
+.vscode/
+
+############################################
+# 3 ▪ System, logi, tymczasowe, prywatne   #
+############################################
+# Systemowe
+.DS_Store
+Thumbs.db
+ehthumbs.db
+# Logi i raporty
+*.log
+*.tlog
+*.trx
+*.coverage*
+# Bazy lokalne i pliki danych
+*.mdf
+*.ldf
+*.sqlite
+*.db
+# Pliki z tajnymi danymi (odkomentuj, jeśli trzymasz je lokalnie)
+# secrets.json
+# appsettings.Development.json
+# .env
