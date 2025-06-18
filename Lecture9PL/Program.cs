@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Lecture9PL.DAL;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +14,11 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddAuthorization();
-        builder.Services.AddControllers();
+        builder.Services.AddControllers().AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+            options.JsonSerializerOptions.WriteIndented = true;
+        });
         builder.Services.AddDbContext<GakkDbContext>(options =>
             options.UseSqlServer(connectionString));
 
